@@ -40,9 +40,9 @@ var getJSONData = function(url) {
         });
 }
 
-if (!sessionStorage.getItem("logueo") && window.location !== "login.html") {
+if ((!sessionStorage.getItem("logueo")) && (window.location.href.indexOf("login.html") < 0)) {
     window.location.href = "login.html";
-    console.log(window.location.search("/login.html")) // necesito comparar el location con el login direccionado.
+
 }
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
