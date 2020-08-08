@@ -40,7 +40,7 @@ var getJSONData = function(url) {
         });
 }
 
-if ((!sessionStorage.getItem("logueo")) && (window.location.href.indexOf("login.html") < 0)) {
+if ((!sessionStorage.getItem("logueo")) && !(window.location.href.endsWith("login.html"))) {
     window.location.href = "login.html";
 
 }
