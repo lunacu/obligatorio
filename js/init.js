@@ -43,7 +43,11 @@ var getJSONData = function(url) {
 if ((!sessionStorage.getItem("logueo")) && !(window.location.href.endsWith("login.html"))) {
     window.location.href = "login.html";
 
+} else {
+    let usuario = sessionStorage.getItem('usuLog');
+    document.getElementById("usuario").innerHTML += 'Usuario_: ' + usuario;
 }
+
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los

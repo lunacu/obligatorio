@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
         evento.preventDefault();
         sessionStorage.setItem("logueo", true);
         location.href = "./index.html";
+        let dato = document.getElementById('usuario').value;
+        sessionStorage.setItem('usuLog', dato);
         return true;
     })
+
 });
