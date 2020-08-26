@@ -23,6 +23,7 @@
             <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
             <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
             <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+            <a class="py-2 d-none d-md-inline-block alert-light" id="usuario"></a>
         </div>
     </nav>
 
@@ -30,6 +31,25 @@
         <div class="text-center p-5">
             <h2>Productos</h2>
         </div>
+        <div class="container-fluid">
+            <form action="#" id="formFilter" class="" method="GET">
+
+                <div class="input-group mb-3 input-group-prepend">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input id="precioInicio" name="precioInicio" type="number" class="form-control">
+
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input id="precioFin" name="precioFin" type="number" class="form-control">
+                    <input class="btn btn-outline-primary" type="submit" id="button-addon2" value="Filtrar"></input>
+
+                </div>
+            </form>
+        </div>
+
         <div class="container-fluid">
             <div>
                 <div class="list-group-item" id="prod-list-container">

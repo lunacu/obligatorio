@@ -1,4 +1,21 @@
 var productsArray = [];
+let inicio;
+let final;
+let filtrado;
+
+let filtro = function(array) {
+    // definimos los parámetros de la búsqueda
+
+
+    // esta es la función que utilizaremos  para filtrar
+    function filtrarArreglo(elemento) {
+        return elemento.cost >= inicio && elemento.cost <= final;
+    }
+
+    // filtramos el arreglo
+    filtrado = array.filter(filtrarArreglo);
+}
+
 
 
 
@@ -32,6 +49,16 @@ function showProductsList(array) {
 
     }
 }
+
+document.getElementById('formFilter').addEventListener('submit', (evento) => {
+    evento.preventDefault();
+    inicio = document.getElementById('precioInicio').value;
+    final = document.getElementById('precioFin').value;
+    filtro(productsArray);
+
+    showProductsList(filtrado);
+
+})
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
