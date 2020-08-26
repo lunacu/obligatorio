@@ -3,16 +3,12 @@ let inicio;
 let final;
 let filtrado;
 
+//filtro por precio
 let filtro = function(array) {
-    // definimos los parámetros de la búsqueda
 
-
-    // esta es la función que utilizaremos  para filtrar
     function filtrarArreglo(elemento) {
         return elemento.cost >= inicio && elemento.cost <= final;
     }
-
-    // filtramos el arreglo
     filtrado = array.filter(filtrarArreglo);
 }
 
