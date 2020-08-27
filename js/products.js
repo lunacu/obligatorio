@@ -50,6 +50,17 @@ document.getElementById('formFilter').addEventListener('submit', (evento) => {
 
 })
 
+//desafiate
+
+function liveSearch() {
+
+    let buscar = document.getElementById('search').value;
+    //falta hacer que filtre
+
+}
+
+
+
 document.getElementById('btnOrdenPrecio').addEventListener('click', (evento) => {
     productsArray.sort((a, b) => a.cost - b.cost);
     showProductsList(productsArray);
