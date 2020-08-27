@@ -45,7 +45,7 @@ if ((!sessionStorage.getItem("logueo")) && !(window.location.href.endsWith("logi
 
 } else {
     let usuario = sessionStorage.getItem('usuLog');
-    document.getElementById("usuario").innerHTML += 'Usuario_: ' + usuario;
+    document.getElementById("usuario").innerHTML += 'Usuario: ' + usuario;
 }
 
 

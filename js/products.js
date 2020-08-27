@@ -1,7 +1,6 @@
 var productsArray = [];
 let inicio;
 let final;
-let filtrado;
 
 //filtro por precio
 let filtro = function(array) {
@@ -9,12 +8,8 @@ let filtro = function(array) {
     function filtrarArreglo(elemento) {
         return elemento.cost >= inicio && elemento.cost <= final;
     }
-    filtrado = array.filter(filtrarArreglo);
+    productsArray = array.filter(filtrarArreglo);
 }
-
-
-
-
 
 function showProductsList(array) {
 
@@ -42,7 +37,6 @@ function showProductsList(array) {
         `
         document.getElementById("prod-list-container").innerHTML = htmlContentToAppend;
 
-
     }
 }
 
@@ -52,8 +46,18 @@ document.getElementById('formFilter').addEventListener('submit', (evento) => {
     final = document.getElementById('precioFin').value;
     filtro(productsArray);
 
-    showProductsList(filtrado);
+    showProductsList(productsArray);
 
+})
+
+document.getElementById('btnOrdenPrecio').addEventListener('click', (evento) => {
+    productsArray.sort((a, b) => a.cost - b.cost);
+    showProductsList(productsArray);
+})
+
+document.getElementById('btnOrdenRelevancia').addEventListener('click', (evento) => {
+    productsArray.sort((a, b) => b.soldCount - a.soldCount);
+    showProductsList(productsArray);
 })
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
