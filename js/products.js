@@ -1,6 +1,7 @@
 var productsArray = [];
 let inicio;
 let final;
+let lista;
 
 //filtro por precio
 let filtro = function(array) {
@@ -19,24 +20,26 @@ function showProductsList(array) {
         let product = array[i];
 
         htmlContentToAppend += `
-        <div class="list-group-item list-group-item-action">
-            <div class="row">
-            <div class="col-3">
-                        <img src="` + product.imgSrc + `" class="img-thumbnail">
-                    </div>              
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <div> U$D ` + product.cost + `</div>
-                        <div>` + product.name + `</div>
-                        <div>` + product.description + `</div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+       
+         <div class="list-group-item list-group-item-action">            
+                 <div class="row">
+                    <div class="col-3">
+                                <img src="` + product.imgSrc + `" class="img-thumbnail">
+                            </div>              
+                        <input type="submit" class="col" id="` + product.name + i + `" value="` + product.name + `">
+                            <div class="d-flex w-100 justify-content-between">
+                                <div> U$D ` + product.cost + `</div>                                
+                                <div>` + product.description + `</div>
+                            </div>              
+                    </div> 
+        </div>            
         `
         document.getElementById("prod-list-container").innerHTML = htmlContentToAppend;
-
+        document.getElementById("scriptSelect").innerHTML += `
+             document.getElementById("formSelect").addEventListener("submit", (evento) => {
+             evento.preventDefault();
+             location.href="./product-info.html?Marca=Chevrolet&Modelo=Onix";
+      })`
     }
 }
 
@@ -49,7 +52,6 @@ document.getElementById('formFilter').addEventListener('submit', (evento) => {
     showProductsList(productsArray);
 
 })
-
 
 
 document.getElementById('btnOrdenPrecio').addEventListener('click', (evento) => {

@@ -23,26 +23,10 @@
             <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
             <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
             <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-            <a class="py-2 d-none d-md-inline-block alert-light" id="usuario"></a>
+            <a class="py-2 d-none d-md-inline-block" href="my-profile.html" id="usuario"></a>
         </div>
     </nav>
-    <div class="container p-5">
-        <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-            <h4 class="alert-heading">¡A trabajar! :)</h4>
-            <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 13/09/2020) y Entrega 4 (Fecha de entrega: 20/09/2020).</p>
-            <hr>
-            <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-        </div>
-    </div>
-    <footer class="text-muted">
-        <div class="container">
-            <p class="float-right">
-                <a href="#">Volver arriba</a>
-            </p>
-            <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-            <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-        </div>
-    </footer>
+
     <div id="spinner-wrapper">
         <div class="lds-ring">
             <div></div>
@@ -51,6 +35,49 @@
             <div></div>
         </div>
     </div>
+
+    <div>
+        <h1>Informacion del producto</h1>
+        <div class="container p-5" id="contImg">
+        </div>
+        <div class="imgnumbers">
+            <label id="boton1">
+                <input type="button" id="1" value="1">
+            </label>
+            <label id="boton2">
+                <input type="button" id="2" value="2">
+            </label>
+            <label id="boton3">
+                <input type="button" id="3" value="3">
+            </label>
+            <label id="boton4">
+                <input type="button" id="4" value="4">
+            </label>
+            <label id="boton5">
+                <input type="button" id="5" value="5">
+            </label>
+            <br>
+        </div>
+        <div class="container p-5" id="contInfo">
+        </div>
+        <div class="container p-5" id="contComentarios">
+            <h1>Comentarios sobre el producto:</h1>
+        </div>
+        <div id="nuevoComent">
+        </div>
+        <div class="form-group">
+            <form action="#">
+                <label for="exampleFormControlArea">Agregar Comentario:</label>
+                <textarea class="form-control" id="exampleFormControlArea" rows="3"></textarea>
+                <input type="submit" value="Comentar" id="botonComent">
+            </form>
+        </div>
+
+
+
+
+    </div>
+
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
