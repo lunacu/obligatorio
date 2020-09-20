@@ -22,8 +22,16 @@
             <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
             <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
             <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-            <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-            <a class="py-2 d-none d-md-inline-block" href="my-profile.html" id="usuario"></a>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="py-2 d-none d-md-inline-block" href="my-profile.html" id="usuario"></a>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="cart.html">Carrito</a>
+                    <a class="dropdown-item" href="my-profile.html">Perfil</a>
+                    <a class="dropdown-item" href="login.html">Log Out</a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -37,6 +45,10 @@
     </div>
 
     <h1>Informacion del producto</h1>
+
+    <div id="prod-image-carrusel">
+    </div>
+
     <div>
         <div class="list-group-item" id="prod-detail-container">
         </div>
@@ -62,10 +74,12 @@
             </label>
             <br>
         </div>
+        <h1>Comentarios sobre el producto:</h1>
+        <br>
         <div class="container p-5" id="contInfo">
         </div>
         <div class="container p-5" id="contComentarios">
-            <h1>Comentarios sobre el producto:</h1>
+
         </div>
         <div id="nuevoComent">
         </div>
@@ -75,6 +89,11 @@
                 <textarea class="form-control" id="exampleFormControlArea" rows="3"></textarea>
                 <input type="submit" value="Comentar" id="botonComent">
             </form>
+        </div>
+
+        <h1>Productos Relacionados:</h1>
+        <br>
+        <div id="relacionados-image-carrusel">
         </div>
 
 

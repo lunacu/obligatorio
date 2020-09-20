@@ -2,6 +2,7 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e) {
+    cerrarSesion();
     document.getElementById('formLogin').addEventListener('submit', (evento) => {
         evento.preventDefault();
         sessionStorage.setItem("logueo", true);
