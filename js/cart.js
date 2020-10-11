@@ -70,7 +70,7 @@ function showCartsList(array) {
                 <table class="table table-striped">
                     <tbody>
                         <tr class="totals key">
-                            <td colspan="1" class="text-left"><strong>Total:</strong></td>
+                            <td colspan="1" class="text-left"><strong>Total:` + (cart.count * cart.unitCost) + `</strong></td>
                         </tr>
 
                     </tbody>
@@ -79,7 +79,7 @@ function showCartsList(array) {
                 <div class="text-center cart-actions">
                     <a href="/checkout?token=debf3cee724db262de7e1d7f9da3cc18" class="btn btn-primary btn-block" title="Proceder al Pago">Pagar</a>
 
-                    <a href="/" class="btn btn-link btn-block" title="← Continúa Comprando">← Continúa Comprando</a>
+                    <a class="btn btn-link btn-block"  href="products.html">← Continúa Comprando</a>
                 </div>
             </div>
         </div>
