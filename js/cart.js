@@ -77,7 +77,9 @@ function showCartsList(array) {
                 </table>
 
                 <div class="text-center cart-actions">
-                    <a href="/checkout?token=debf3cee724db262de7e1d7f9da3cc18" class="btn btn-primary btn-block" title="Proceder al Pago">Pagar</a>
+                <a type="button" class="btn btn-primary btn-block" title="Proceder al Pago" data-toggle="modal" data-target="#exampleModal">
+                Pagar
+               </a>
 
                     <a class="btn btn-link btn-block"  href="products.html">← Continúa Comprando</a>
                 </div>
@@ -89,6 +91,73 @@ function showCartsList(array) {
     }
 
 }
+
+//semana de mudanza tuve poco tiempo no termine de resolver esto.
+
+
+// function cart() {
+//     let checker = new RegExp('^[a-zA-Z0-9\-\]{5-20}$');
+//     console.log("prueba");
+//     var Pais, Direccion, Numero, NumerodeContacto, NumerodeCuenta, NumerodeTarjeta, CodigodeSeguridad, FechadeV
+//     Direccion = document.getElementById("Direccion").value;
+//     Pais = document.getElementById("Pais").value;
+//     Numero = document.getElementById("Numero").value;
+//     NumerodeContacto = document.getElementById("Contacto").value;
+//     NumerodeCuenta = document.getElementById("Cuenta").value;
+//     NumerodeTarjeta = document.getElementById("Credito").value;
+//     CodigodeSeguridad = document.getElementById("Codigo").value;
+//     FechadeV = document.getElementById("Fecha").value;
+
+
+
+//     if (Pais === "" || checker.test("Pais")) {
+//         alert("El nombre del pais esta vacio")
+//     } else if (Direccion === "" || checker.test("Direccion")) {
+//         alert("La direccion esta vacio");
+//         return
+//     } else if (Numero === "" || checker.test("Numero")) {
+//         alert("El Numero esta vacio");
+//         return
+//     } else if (NumerodeContacto === "" || checker.test("NumerodeContacto")) {
+//         alert("El numero de contacto esta vacio")
+//         return
+
+//     } else if (NumerodeCuentas === "" || checker.test("NumerodeCuentas ")) {
+//         alert("El numero de cuenta esta vacio")
+//     } else if (NumerodeTarjeta === "" || checker.test("NumerodeTarjeta")) {
+//         alert("El numero de tarjeta esta vacio");
+//         return
+//     } else if (CodigodeSeguridad === "" || checker.test("CodigodeSeguridad")) {
+//         alert("El codigo de seguridad esta vacio");
+//         return
+//     } else if (FechadeV === "" || checker.test("FechadeV ")) {
+//         alert("La fecah de vencimiento  esta vacio")
+//         return
+
+
+//     }
+// }
+
+
+document.getElementById("Banco").addEventListener("change", (e) => {
+    verificarPago = true
+
+    document.getElementById("Cuenta").disabled = false;
+    document.getElementById("Credito").disabled = true;
+    document.getElementById("Codigo").disabled = true;
+    document.getElementById("Fecha").disabled = true;
+
+
+})
+
+document.getElementById("Tarjetaso").addEventListener("change", (e) => {
+    verificarPago = true
+    document.getElementById("Credito").disabled = false;
+    document.getElementById("Codigo").disabled = false;
+    document.getElementById("Fecha").disabled = false;
+    document.getElementById("Cuenta").disabled = true;
+
+})
 
 
 

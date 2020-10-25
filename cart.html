@@ -70,6 +70,44 @@
 
                 </div>
 
+
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <form action="#" method="GET" id="modalForm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Opciones</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="radio" id="Banco" name="pago" value="Bank-Transfer">
+                                <label for="Bank-Transfer">Transferencia Bancaria</label><br>
+                                <p>Numero de Cuenta</p>
+                                <input id="Cuenta" type="text" placeholder="*********" size="20" required disabled><br>
+                                <br>
+                                <input type="radio" id="Tarjetaso" name="pago" value="Credit-Card">
+                                <label for="Credit-Card">Tarjeta de Credito</label><br>
+                                <p>Numero de Tarjeta</p>
+                                <input id="Credito" type="text" placeholder="********" size="20" required disabled><br>
+                                <p>Codigo de Seguridad</p>
+                                <input id="Codigo" type="number" placeholder="*******" size="10" required disabled><br>
+                                <p>Fecha de Vencimiento MM/AA</p>
+                                <input id="Fecha" type="text" placeholder="********" size="20" required disabled><br>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button> -->
+                                <button type="submit" class="btn btn-primary" id="Confirm" data-dismiss="modal">Confirmar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
 
         </div>
